@@ -71,9 +71,9 @@ blog_posts = []
 extract_from_list(soup)
 page = next_page(soup)
 
-# while page is not None:
-#     extract_from_list(page)
-#     page = next_page(page)
+while page is not None:
+    extract_from_list(page)
+    page = next_page(page)
 
 with open("blog_posts.json", "w", encoding="utf-8") as f:
     json.dump(blog_posts, f, ensure_ascii=False, indent=4)
